@@ -13,7 +13,7 @@
     if (localStorage.getItem('cta_timer_expired') === '1') {
         // Redirecionar IMEDIATAMENTE para CTA preservando UTMs
         const currentUrl = new URL(window.location.href);
-        const ctaUrl = new URL('./cta.html', window.location.href);
+        const ctaUrl = new URL('/app/cta.html', window.location.href);
         
         currentUrl.searchParams.forEach((value, key) => {
             if (key.startsWith('utm_') || key === 'src') {
@@ -170,7 +170,7 @@ function generateRandomUsers(count = 10) {
  * Redireciona para CTA preservando parâmetros UTM
  * @param {string} page - Página destino (default: 'cta.html')
  */
-function goToCTA(page = 'cta.html') {
+function goToCTA(page = '/app/cta.html') {
     const currentParams = window.location.search;
     const newUrl = page + currentParams;
     window.location.href = newUrl;
@@ -181,7 +181,7 @@ function goToCTA(page = 'cta.html') {
  * @param {string} page - Página destino (default: 'cta.html')
  * @returns {string} - URL completa com parâmetros
  */
-function getCTAUrl(page = 'cta.html') {
+function getCTAUrl(page = '/app/cta.html') {
     const currentParams = window.location.search;
     return page + currentParams;
 }
