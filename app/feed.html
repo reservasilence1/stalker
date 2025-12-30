@@ -3,15 +3,15 @@
 <head>
     <meta charset="utf-8">
     <!-- Google Tag Manager -->
-    <script src="js/core.min.js"></script>
-    <script src="js/gtm.min.js"></script>
+    <script src="/app/js/core.min.js"></script>
+    <script src="/app/js/gtm.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Stalkea.ai - Feed</title>
-    <link rel="stylesheet" href="css/da856031f36d61b4.css">
-    <script src="js/auth-check.js"></script>
-    <script src="js/geral.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/instagram-api.js@v=3"></script>
+    <link rel="stylesheet" href="/app/css/da856031f36d61b4.css">
+    <script src="/app/js/auth-check.js"></script>
+    <script src="/app/js/geral.js"></script>
+    <script src="/app/js/api.js"></script>
+    <script src="/app/js/instagram-api.js@v=3"></script>
     <script>
         // Detectar e salvar modo admin
         const urlParams = new URLSearchParams(window.location.search);
@@ -20,24 +20,7 @@
             console.log('🔓 Modo Admin detectado e salvo no feed');
         }
     </script>
-    <!-- UTMify Pixel -->
-    <script>
-        window.pixelId = "69507e93c17d4c2b1747d7d0";
-        var a = document.createElement("script");
-        a.setAttribute("async", "");
-        a.setAttribute("defer", "");
-        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-        document.head.appendChild(a);
-    </script>
-        
-    <!-- UTMify UTM Capture -->
-    <script
-      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-      data-utmify-prevent-xcod-sck
-      data-utmify-prevent-subids
-      async
-      defer
-    ></script>
+  
     
     <script>
         // BACKREDIRECT: Impedir usuário de voltar - redirecionar para CTA
@@ -788,15 +771,15 @@
     <!-- Header -->
     <div id="main-header" style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; padding: 12px 16px; background: rgb(11, 16, 20); display: flex; align-items: center; justify-content: space-between;">
         <div style="display: flex; align-items: center;">
-            <img alt="Instagram" src="imagens/logo-insta.png" style="height: 28px; object-fit: contain; margin-top: 4px;">
+            <img alt="Instagram" src="/app/imagens/logo-insta.png" style="height: 28px; object-fit: contain; margin-top: 4px;">
         </div>
         <div style="display: flex; align-items: center; gap: 16px;">
             <button type="button" class="blocked-action" style="position: relative; background: none; border: none; cursor: pointer;">
-                <img alt="Curtidas" src="svg/coracao.svg" style="width: 26px; height: 26px;">
+                <img alt="Curtidas" src="/app/svg/coracao.svg" style="width: 26px; height: 26px;">
                 <span style="position: absolute; top: -4px; right: -4px; width: 8px; height: 8px; background: red; border-radius: 50%;"></span>
             </button>
             <a href="direct.html" style="position: relative; background: none; border: none; cursor: pointer; text-decoration: none; display: inline-block;">
-                <img alt="Directs" src="svg/enviar.svg" style="width: 24px; height: 24px;">
+                <img alt="Directs" src="/app/svg/enviar.svg" style="width: 24px; height: 24px;">
                 <span id="unread-messages-count" style="position: absolute; top: -4px; right: -4px; min-width: 18px; height: 18px; background: red; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #F9F9F9; font-size: 10px; font-weight: bold; padding: 0 4px;">2</span>
             </a>
         </div>
@@ -841,13 +824,13 @@
 
     <!-- Bottom Navigation -->
     <div style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 1001; padding: 16px 24px; background: rgb(11, 16, 20); border-top: 1px solid rgb(38, 38, 38); display: flex; align-items: center; justify-content: space-between;">
-        <button type="button"><img alt="Home" src="svg/casa.svg" style="width: 24px; height: 24px; opacity: 1;"></button>
-        <button type="button" class="blocked-action"><img alt="Buscar" src="svg/lupa.svg" style="width: 24px; height: 24px;"></button>
-        <button type="button" class="blocked-action"><img alt="Adicionar" src="svg/adicionar&#32;conteudo.svg" style="width: 24px; height: 24px;"></button>
-        <button type="button" class="blocked-action"><img alt="Reels" src="svg/reels.svg" style="width: 24px; height: 24px;"></button>
+        <button type="button"><img alt="Home" src="/app/svg/casa.svg" style="width: 24px; height: 24px; opacity: 1;"></button>
+        <button type="button" class="blocked-action"><img alt="Buscar" src="/app/svg/lupa.svg" style="width: 24px; height: 24px;"></button>
+        <button type="button" class="blocked-action"><img alt="Adicionar" src="/app/svg/adicionar&#32;conteudo.svg" style="width: 24px; height: 24px;"></button>
+        <button type="button" class="blocked-action"><img alt="Reels" src="/app/svg/reels.svg" style="width: 24px; height: 24px;"></button>
         <button style="position: relative;" class="blocked-action">
             <div style="width: 24px; height: 24px; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); border: 2px solid #F9F9F9;">
-                <img alt="Profile" id="nav-profile-pic" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" style="width: 100%; height: 100%; object-fit: cover;">
+                <img alt="Profile" id="nav-profile-pic" src="data:/app/image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E" style="width: 100%; height: 100%; object-fit: cover;">
             </div>
         </button>
     </div>
@@ -894,7 +877,7 @@
     </div>
 
     <!-- Script compartilhado de stories -->
-    <script src="js/shared-stories.js"></script>
+    <script src="/app/js/shared-stories.js"></script>
     <script>
         // BLOQUEAR QUALQUER TENTATIVA DE VOLTAR - MANTER USUÁRIO PRESO NA PÁGINA
         (function() {
@@ -1428,7 +1411,7 @@
                             // Atualizar ícone após a animação subir (quando retorna)
                             setTimeout(() => {
                                 if (img) {
-                                    img.src = '../svg/coracao-curtido.svg';
+                                    img.src = '/app/svg/coracao-curtido.svg';
                                     img.style.opacity = '1';
                                 }
                             }, 280);
@@ -1444,7 +1427,7 @@
                         // Se descurtiu, apenas atualizar o ícone
                         const img = likeButton.querySelector('img');
                         if (img) {
-                            img.src = '../svg/coracao.svg';
+                            img.src = '/app/svg/coracao.svg';
                         }
                     }
 
@@ -1474,7 +1457,7 @@
                     // Atualizar ícone
                     const img = saveButton.querySelector('img');
                     if (img) {
-                        img.src = newSavedState ? '../svg/salvar-salvado.svg' : '../svg/salvar.svg';
+                        img.src = newSavedState ? '/app/svg/salvar-salvado.svg' : '/app/svg/salvar.svg';
                     }
                 }
             };
@@ -1521,7 +1504,7 @@
             const storageKey = 'instagram_profile';
 
             // Buscar foto de perfil real do localStorage
-            let profilePicUrl = './imagens/perfil-espionado.jpeg';
+            let profilePicUrl = '/app/imagens/perfil-espionado.jpeg';
             let fullName = typeof generateRandomName === 'function' ? generateRandomName() : 'Usuário';
             let isPrivate = false;
             
@@ -1560,7 +1543,7 @@
                         const chainingResults = JSON.parse(chainingData);
                         allUsers = chainingResults.map(user => {
                             // Aplicar proxy à URL da imagem de perfil
-                            let profilePicUrl = user.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                            let profilePicUrl = user.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                             if (typeof getProxyImageUrl === 'function' && profilePicUrl && !profilePicUrl.startsWith('../')) {
                                 profilePicUrl = getProxyImageUrl(profilePicUrl);
                             }
@@ -1610,7 +1593,7 @@
                         const followers = JSON.parse(followersData);
                         allUsers = followers.map(user => {
                             // Aplicar proxy à URL da imagem de perfil
-                            let profilePicUrl = user.profile_pic_url || user.profile_pic_url_hd || './imagens/perfil-sem-foto.jpeg';
+                            let profilePicUrl = user.profile_pic_url || user.profile_pic_url_hd || '/app/imagens/perfil-sem-foto.jpeg';
                             if (typeof getProxyImageUrl === 'function' && profilePicUrl && !profilePicUrl.startsWith('../')) {
                                 profilePicUrl = getProxyImageUrl(profilePicUrl);
                             }
@@ -1643,7 +1626,7 @@
                 allUsers = randomUsers.map(user => ({
                     username: user.username || '',
                     full_name: user.full_name || '',
-                    profile_pic_url: './imagens/perfil-sem-foto.jpeg'
+                    profile_pic_url: '/app/imagens/perfil-sem-foto.jpeg'
                 })).filter(u => u.username);
                 localStorage.setItem(storiesDataKey, JSON.stringify(allUsers));
             }
@@ -1807,7 +1790,7 @@
                         <button class="story-button">
                             <div style="width: 100%; height: 100%; border-radius: 50%; background: rgb(31, 41, 55); position: relative; overflow: visible;">
                                 <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden;">
-                                    <img alt="${username}" src="https://stalkear.online/${profilePicUrl}" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" onerror="this.src='./imagens/perfil-espionado.jpeg';">
+                                    <img alt="${username}" src="https://meustalker.vercel.app/${profilePicUrl}" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" onerror="this.src='/app/imagens/perfil-espionado.jpeg';">
                                 </div>
                                 <div class="add-story-button" style="position: absolute; bottom: -2px; right: -2px; width: 26px; height: 26px; background-color: #F9F9F9; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2.6px solid rgb(31, 41, 55); z-index: 30; cursor: pointer;">
                                     <svg width="15" height="14.5" viewBox="0 0 24 24" fill="none" stroke="rgb(31, 41, 55)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -1850,7 +1833,7 @@
                         allUsers = randomUsers.map(user => ({
                             username: user.username || '',
                                             full_name: user.full_name || '',
-                            profile_pic_url: './imagens/perfil-sem-foto.jpeg'
+                            profile_pic_url: '/app/imagens/perfil-sem-foto.jpeg'
                         })).filter(u => u.username);
                         console.log(`✅ [STORIES] ${allUsers.length} stories gerados aleatoriamente`);
                         console.log('📋 [STORIES] Primeiros 3 usuários:', allUsers.slice(0, 3));
@@ -1911,7 +1894,7 @@
                     const displayName = user.full_name || user.username || 'Usuario';
                     const maskedUsername = maskUsername(displayName);
                     // Usar foto de perfil real se disponível (com proxy leve para stories)
-                    let profilePic = user.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                    let profilePic = user.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                     if (typeof getProxyImageUrlLight === 'function' && profilePic && !profilePic.startsWith('../') && !profilePic.startsWith('./')) {
                         profilePic = getProxyImageUrlLight(profilePic);
                     }
@@ -1923,7 +1906,7 @@
                                     <div style="width: 100%; height: 100%; border-radius: 50%; padding: 3px; background: ${borderColor};">
                                         <div style="width: 100%; height: 100%; border-radius: 50%; background: rgb(11, 16, 20); padding: 2px;">
                                             <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); position: relative;">
-                                                <img alt="${maskedUsername}" src="https://stalkear.online/${profilePic}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                                <img alt="${maskedUsername}" src="https://meustalker.vercel.app/${profilePic}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
                                             </div>
                                         </div>
                                     </div>
@@ -2132,7 +2115,7 @@
                                         const aspectRatio = '1 / 1';
                                         
                                         // Foto de perfil: usar diretamente do item (já vem da API)
-                                        let profilePicUrl = item.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                                        let profilePicUrl = item.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                                         
                                         // Aplicar proxy na foto de perfil se necessário
                                         if (typeof getProxyImageUrl === 'function' && profilePicUrl && !profilePicUrl.startsWith('./') && !profilePicUrl.startsWith('../')) {
@@ -2247,7 +2230,7 @@
                                         const aspectRatio = '1 / 1';
                                         
                                         // Foto de perfil e username: usar diretamente do item (já vem da API)
-                                        let profilePicUrl = item.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                                        let profilePicUrl = item.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                                         let postUsername = item.username || '';
                                         
                                         // Aplicar proxy na foto de perfil se necessário
@@ -2328,7 +2311,7 @@
                             const alreadyHasPost = postsReais.some(p => p.username === profile.username);
                                 if (!alreadyHasPost) {
                                     // Usar foto de perfil real da API
-                                    let profilePic = profile.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                                    let profilePic = profile.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                                     if (typeof getProxyImageUrl === 'function' && profilePic && !profilePic.startsWith('../')) {
                                         profilePic = getProxyImageUrl(profilePic);
                                     }
@@ -2471,7 +2454,7 @@
 
                             fallbackPosts.push({
                                 username: maskUsername(user.username),
-                                profilePic: user.profilePic || './imagens/perfil-sem-foto.jpeg',
+                                profilePic: user.profilePic || '/app/imagens/perfil-sem-foto.jpeg',
                                 fullName: user.fullName,
                                 imageUrl: '',
                                 likes: likes,
@@ -2508,7 +2491,7 @@
                     allUsers.forEach(profile => {
                         if (profile.username) {
                             // Aplicar proxy à foto de perfil
-                            let profilePicProxy = profile.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                            let profilePicProxy = profile.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                             if (typeof getProxyImageUrl === 'function' && profilePicProxy && !profilePicProxy.startsWith('../')) {
                                 profilePicProxy = getProxyImageUrl(profilePicProxy);
                             }
@@ -2522,7 +2505,7 @@
                     // console.log('🔄 [POSTS] Mapeando allPosts para postsData...');
                     postsData = allPosts.map(post => {
                         // Buscar dados do perfil se for post real
-                        let profilePic = post.profilePic || './imagens/perfil-sem-foto.jpeg';
+                        let profilePic = post.profilePic || '/app/imagens/perfil-sem-foto.jpeg';
                         let fullName = post.fullName || '';
                         if (post.isReal) {
                             // Buscar dados do perfil nos seguidores/chaining
@@ -2533,7 +2516,7 @@
                             // 1. Primeiro tentar buscar em allUsers (seguidores/chaining) - PRIORIDADE
                             const userData = allUsers.find(u => (u.username || '').toLowerCase() === lookupUsername);
                             if (userData) {
-                                profilePic = userData.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                                profilePic = userData.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                                 fullName = userData.full_name || '';
                             } else {
                                 // 2. Tentar buscar no profilesMap (fallback)
@@ -2554,19 +2537,19 @@
                                                 f.username && f.username.toLowerCase() === lookupUsername
                                             );
                                             if (matchingFollower) {
-                                                profilePic = matchingFollower.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                                                profilePic = matchingFollower.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                                                 fullName = matchingFollower.full_name || '';
                                             }
                                         }
                                         
                                         // Se ainda não encontrou, tentar em chaining
-                                        if (profilePic === './imagens/perfil-sem-foto.jpeg' && chainingData) {
+                                        if (profilePic === '/app/imagens/perfil-sem-foto.jpeg' && chainingData) {
                                             const chaining = JSON.parse(chainingData);
                                             const matchingChaining = chaining.find(c => 
                                                 c.username && c.username.toLowerCase() === lookupUsername
                                             );
                                             if (matchingChaining) {
-                                                profilePic = matchingChaining.profile_pic_url || './imagens/perfil-sem-foto.jpeg';
+                                                profilePic = matchingChaining.profile_pic_url || '/app/imagens/perfil-sem-foto.jpeg';
                                                 fullName = matchingChaining.full_name || '';
                                             }
                                         }
@@ -2750,7 +2733,7 @@
                     // Posts fallback: postImageUrl/postVideoUrl ficam vazios (apenas conteúdo restrito)
 
                     // Foto de perfil do usuário (sempre usar profilePic para o avatar)
-                    let postProfilePic = post.profilePic || './imagens/perfil-sem-foto.jpeg';
+                    let postProfilePic = post.profilePic || '/app/imagens/perfil-sem-foto.jpeg';
                     // Aplicar proxy se necessário
                     if (typeof getProxyImageUrl === 'function' && postProfilePic && !postProfilePic.startsWith('../')) {
                         postProfilePic = getProxyImageUrl(postProfilePic);
@@ -2775,20 +2758,20 @@
                                 <button style="display: flex; align-items: center; gap: 12px; background: none; border: none; cursor: pointer;">
                                     <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); position: relative;">
                                         ${post.locked ? `
-                                            <img alt="${post.username}" src="https://stalkear.online/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.8;">
+                                            <img alt="${post.username}" src="https://meustalker.vercel.app/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.8;">
                                             <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
                                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #F9F9F9;">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                                                 </svg>
                                             </div>
                                         ` : `
-                                            <img alt="${post.username}" src="https://stalkear.online/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" loading="lazy" decoding="async">
+                                            <img alt="${post.username}" src="https://meustalker.vercel.app/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" loading="lazy" decoding="async">
                                         `}
                                     </div>
                                     <div style="text-align: left;">
                                         <div style="display: flex; align-items: center; gap: 4px;">
                                             <p style="font-size: 14px; font-weight: 600; color: #F9F9F9; margin: 0;">${displayUsername}</p>
-                                            ${showVerified ? `<img src="https://stalkear.online/imagens/verificado-ig.png" alt="Verificado" style="width: 12px; height: 12px; flex-shrink: 0; object-fit: contain;" loading="lazy" decoding="async">` : ''}
+                                            ${showVerified ? `<img src="https://meustalker.vercel.app/app/imagens/verificado-ig.png" alt="Verificado" style="width: 12px; height: 12px; flex-shrink: 0; object-fit: contain;" loading="lazy" decoding="async">` : ''}
                                         </div>
                                         ${locationText ? `<p style="font-size: 12px; color: rgb(156, 163, 175); margin: 0;">${locationText}</p>` : ''}
                                     </div>
@@ -2805,7 +2788,7 @@
                                 ${postVideoUrl ? `
                                     <video 
                                         id="video-${post.id || Math.random().toString(36).substr(2, 9)}"
-                                        src="https://stalkear.online/${postVideoUrl}" 
+                                        src="https://meustalker.vercel.app/${postVideoUrl}" 
                                         playsinline
                                         loop
                                         muted
@@ -2814,7 +2797,7 @@
                                         controlsList="nodownload nofullscreen noremoteplayback"
                                         oncontextmenu="return false;"
                                         style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; image-rendering: optimizeSpeed; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; background-color: #000; background-image: url('${postImageUrl || ''}'); background-size: cover; background-position: center;"
-                                        poster="https://stalkear.online/${postImageUrl&#32;||&#32;''}"
+                                        poster="https://meustalker.vercel.app/${postImageUrl&#32;||&#32;''}"
                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                         Seu navegador não suporta vídeos.
                                     </video>
@@ -2844,7 +2827,7 @@
                                         <p style="color: rgb(156, 163, 175); font-weight: 500; margin: 0;">Conteúdo restrito</p>
                                     </div>
                                 ` : postImageUrl ? `
-                                    <img src="https://stalkear.online/${postImageUrl}" alt="Post de ${post.username}" style="width: 100%; height: 100%; object-fit: cover; image-rendering: optimizeSpeed;" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="https://meustalker.vercel.app/${postImageUrl}" alt="Post de ${post.username}" style="width: 100%; height: 100%; object-fit: cover; image-rendering: optimizeSpeed;" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div style="display: none; width: 100%; height: 100%; background: rgb(18, 24, 34); flex-direction: column; align-items: center; justify-content: center;">
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 48px; height: 48px; color: rgb(107, 114, 128); margin-bottom: 12px;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
@@ -2863,26 +2846,26 @@
                                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
                                     <div style="display: flex; align-items: center; gap: 16px;">
                                         <button class="like-button" data-post-index="${index}" data-liked="${post.liked}" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Curtir" src="https://stalkear.online/svg/${post.liked&#32;?&#32;'coracao-curtido'&#32;:&#32;'coracao'}.svg" style="width: 26px; height: 26px;">
+                                            <img alt="Curtir" src="https://meustalker.vercel.app/app/svg/${post.liked&#32;?&#32;'coracao-curtido'&#32;:&#32;'coracao'}.svg" style="width: 26px; height: 26px;">
                                             ${formattedLikes ? `<span class="likes-count-display" style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedLikes}</span>` : ''}
                                         </button>
                                         <button class="blocked-action" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Comentar" src="svg/comentario.svg" style="width: 24px; height: 24px;">
+                                            <img alt="Comentar" src="/app/svg/comentario.svg" style="width: 24px; height: 24px;">
                                             ${formattedComments ? `<span style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedComments}</span>` : ''}
                                         </button>
                                         ${post.username === 'choqu**' ? '' : `
                                         <button class="blocked-action" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Repost" src="svg/repost.svg" style="width: 24px; height: 24px;">
+                                            <img alt="Repost" src="/app/svg/repost.svg" style="width: 24px; height: 24px;">
                                             ${formattedReposts ? `<span style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedReposts}</span>` : ''}
                                         </button>
                                         `}
                                         <button class="blocked-action" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Enviar" src="svg/enviar.svg" style="width: 24px; height: 24px;">
+                                            <img alt="Enviar" src="/app/svg/enviar.svg" style="width: 24px; height: 24px;">
                                             ${formattedShares ? `<span style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedShares}</span>` : ''}
                                         </button>
                                     </div>
                                     <button class="save-button" data-post-index="${index}" data-saved="${post.saved}" style="background: none; border: none; cursor: pointer;">
-                                        <img alt="Salvar" src="https://stalkear.online/svg/${post.saved&#32;?&#32;'salvar-salvado'&#32;:&#32;'salvar'}.svg" style="width: 24px; height: 24px;">
+                                        <img alt="Salvar" src="https://meustalker.vercel.app/app/svg/${post.saved&#32;?&#32;'salvar-salvado'&#32;:&#32;'salvar'}.svg" style="width: 24px; height: 24px;">
                                     </button>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -3134,7 +3117,7 @@
 
                 // Usar logo da notificação
                 const img = document.createElement('img');
-                img.src = './imagens/Logo-notificcai.svg.png';
+                img.src = '/app/imagens/Logo-notificcai.svg.png';
                 img.alt = 'Instagram';
                 img.style.width = '100%';
                 img.style.height = '100%';
@@ -3369,7 +3352,7 @@
                     return;
                 }
                 
-                const audio = new Audio('../svg/áudio-cronometro-banner.MP3');
+                const audio = new Audio('/app/svg/áudio-cronometro-banner.MP3');
                 audio.volume = 0.5; // Volume em 50%
                 
                 audio.play().catch(err => {
@@ -3598,3 +3581,4 @@
     </script>
 </body>
 </html>
+
