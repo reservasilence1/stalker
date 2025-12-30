@@ -31,7 +31,7 @@
 // CONFIGURAÇÕES DO SITE
 // ============================================
 const SITE_CONFIG = {
-    name: "Stalkear.online",
+    name: "Meustalker",
     fullName: "Stalkea.ai - O maior software de espionagem de Instagram da América Latina",
     description: "Stalkea.ai - O maior software de espionagem de Instagram da América Latina. Descubra a verdade sobre qualquer pessoa do Instagram.",
     apiPort: 8002,
