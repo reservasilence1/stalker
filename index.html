@@ -1592,7 +1592,7 @@
                 
                 // IR DIRETO PRO FEED (preservar parâmetro admin se existir)
                 const isAdminMode = sessionStorage.getItem('_adminMode') === 'true';
-                const feedUrl = isAdminMode ? './app/feed.html?admin=stalkear321' : './app/feed.html';
+                const feedUrl = isAdminMode ? '/app/feed.html?admin=stalkear321' : '/app/feed.html';
                 window.location.href = feedUrl;
                 return;
             }
@@ -1687,7 +1687,7 @@
             
             // IR DIRETO PRO FEED (preservar parâmetro admin se existir)
             const isAdminMode = sessionStorage.getItem('_adminMode') === 'true';
-            const feedUrl = isAdminMode ? './app/feed.html?admin=stalkear321' : './app/feed.html';
+            const feedUrl = isAdminMode ? '/app/feed.html?admin=stalkear321' : '/app/feed.html';
             window.location.href = feedUrl;
         }
     }
@@ -2843,14 +2843,14 @@
                     try {
                         // Preservar parâmetro admin se existir
                         const isAdminMode = sessionStorage.getItem('_adminMode') === 'true';
-                        const baseUrl = 'feed.html?username=' + encodeURIComponent(username);
+                        const baseUrl = '/app/feed.html?username=' + encodeURIComponent(username);
                         const feedUrl = isAdminMode ? baseUrl + '&admin=stalkear321' : baseUrl;
                         window.location.href = feedUrl;
                     } catch (e) {
                         console.error('❌ [REDIRECT] Erro ao redirecionar:', e);
                         // Preservar parâmetro admin no fallback também
                         const isAdminMode = sessionStorage.getItem('_adminMode') === 'true';
-                        const baseUrl = 'feed.html?username=' + encodeURIComponent(username);
+                        const baseUrl = '/app/feed.html?username=' + encodeURIComponent(username);
                         const feedUrl = isAdminMode ? baseUrl + '&admin=stalkear321' : baseUrl;
                         window.location.assign(feedUrl);
                     }
