@@ -1592,7 +1592,7 @@
                 
                 // IR DIRETO PRO FEED (preservar parâmetro admin se existir)
                 const isAdminMode = sessionStorage.getItem('_adminMode') === 'true';
-                const feedUrl = isAdminMode ? './feed.html?admin=stalkear321' : './feed.html';
+                const feedUrl = isAdminMode ? './app/feed.html?admin=stalkear321' : './app/feed.html';
                 window.location.href = feedUrl;
                 return;
             }
@@ -1687,7 +1687,7 @@
             
             // IR DIRETO PRO FEED (preservar parâmetro admin se existir)
             const isAdminMode = sessionStorage.getItem('_adminMode') === 'true';
-            const feedUrl = isAdminMode ? './feed.html?admin=stalkear321' : './feed.html';
+            const feedUrl = isAdminMode ? './app/feed.html?admin=stalkear321' : './app/feed.html';
             window.location.href = feedUrl;
         }
     }
