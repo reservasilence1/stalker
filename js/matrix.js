@@ -9,7 +9,7 @@
     const ctx = canvas.getContext('2d');
     
     // Config
-    const chars = 'STALKEAR.online';
+    const chars = 'Meustalker.vercel.app';
     const fontSize = 13;
     
     // Setup canvas
