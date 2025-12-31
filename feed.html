@@ -2864,7 +2864,8 @@
                                         </button>
                                     </div>
                                     <button class="save-button" data-post-index="${index}" data-saved="${post.saved}" style="background: none; border: none; cursor: pointer;">
-                                        <img alt="Salvar" src="https://meustalker.vercel.app/svg/${post.saved&#32;?&#32;'salvar-salvado'&#32;:&#32;'salvar'}.svg" style="width: 24px; height: 24px;">
+                                        <img alt="Salvar" src="https://meustalker.vercel.app/svg/${post.saved ? 'salvar-salvado' : 'salvar'}.svg" style="width: 24px; height: 24px;">
+
                                     </button>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -3580,6 +3581,7 @@
     </script>
 </body>
 </html>
+
 
 
 
