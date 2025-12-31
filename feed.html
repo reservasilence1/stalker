@@ -2765,21 +2765,35 @@
                                 <button style="display: flex; align-items: center; gap: 12px; background: none; border: none; cursor: pointer;">
                                     <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); position: relative;">
                                         ${post.locked ? `
-                                            <img alt="${post.username}" src="https://meustalker.vercel.app/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.8;">
+                                          <img alt="${post.username}"
+     src="${/^https?:\/\//i.test(postProfilePic) ? postProfilePic : `/${String(postProfilePic||'').replace(/^\/+/, '')}`}"
+     style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.8;">
+
                                             <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
                                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #F9F9F9;">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                                                 </svg>
                                             </div>
                                         ` : `
-                                            <img alt="${post.username}" src="https://meustalker.vercel.app/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" loading="lazy" decoding="async">
+<img alt="${post.username}"
+     src="${/^https?:\/\//i.test(postProfilePic) ? postProfilePic : `/${String(postProfilePic||'').replace(/^\/+/, '')}`}"
+     style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;"
+     loading="lazy" decoding="async">
                                         `}
                                     </div>
-                                    <div style="text-align: left;">
-                                        <div style="display: flex; align-items: center; gap: 4px;">
-                                            <p style="font-size: 14px; font-weight: 600; color: #F9F9F9; margin: 0;">${displayUsername}</p>
-                                            ${showVerified ? `<img src="https://meustalker.vercel.app/images/verificado-ig.png" alt="Verificado" style="width: 12px; height: 12px; flex-shrink: 0; object-fit: contain;" loading="lazy" decoding="async">` : ''}
-                                        </div>
+                                  <div style="text-align: left;">
+  <div style="display: flex; align-items: center; gap: 4px;">
+    <p style="font-size: 14px; font-weight: 600; color: #F9F9F9; margin: 0;">${displayUsername}</p>
+    ${showVerified ? `
+      <img src="/images/verificado-ig.png"
+           alt="Verificado"
+           style="width: 12px; height: 12px; flex-shrink: 0; object-fit: contain;"
+           loading="lazy"
+           decoding="async">
+    ` : ''}
+  </div>
+</div>
+
                                         ${locationText ? `<p style="font-size: 12px; color: rgb(156, 163, 175); margin: 0;">${locationText}</p>` : ''}
                                     </div>
                                 </button>
@@ -2793,21 +2807,36 @@
                             </div>
                             <div class="post-image-container" style="width: 100%; aspect-ratio: ${post.aspectRatio}; background: rgb(18, 24, 34); display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 0; position: relative; overflow: hidden;">
                                 ${postVideoUrl ? `
-                                    <video 
-                                        id="video-${post.id || Math.random().toString(36).substr(2, 9)}"
-                                        src="https://meustalker.vercel.app/${postVideoUrl}" 
-                                        playsinline
-                                        loop
-                                        muted
-                                        preload="none"
-                                        disablePictureInPicture
-                                        controlsList="nodownload nofullscreen noremoteplayback"
-                                        oncontextmenu="return false;"
-                                        style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; image-rendering: optimizeSpeed; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; background-color: #000; background-image: url('${postImageUrl || ''}'); background-size: cover; background-position: center;"
-                                        poster="https://meustalker.vercel.app/${postImageUrl || ''}"
-                                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                                        Seu navegador não suporta vídeos.
-                                    </video>
+                                   <video
+  id="video-${post.id || Math.random().toString(36).substr(2, 9)}"
+  src="${/^https?:\/\//i.test(postVideoUrl) ? postVideoUrl : `/${String(postVideoUrl||'').replace(/^\/+/, '')}`}"
+  playsinline
+  loop
+  muted
+  preload="none"
+  disablePictureInPicture
+  controlsList="nodownload nofullscreen noremoteplayback"
+  oncontextmenu="return false;"
+  style="
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    image-rendering: optimizeSpeed;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    background-color: #000;
+    background-image: url('${/^https?:\/\//i.test(postImageUrl) ? postImageUrl : postImageUrl ? `/${String(postImageUrl).replace(/^\/+/, '')}` : ''}');
+    background-size: cover;
+    background-position: center;
+  "
+  poster="${/^https?:\/\//i.test(postImageUrl) ? postImageUrl : postImageUrl ? `/${String(postImageUrl).replace(/^\/+/, '')}` : ''}"
+  onerror="this.style.display='none'; this.nextElementSibling && (this.nextElementSibling.style.display='flex');"
+>
+  Seu navegador não suporta vídeos.
+</video>
+
                                     <!-- Controles Instagram style -->
                                     <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
                                         <!-- Botão de Mute/Unmute no canto inferior direito (estilo Instagram) -->
@@ -2834,7 +2863,13 @@
                                         <p style="color: rgb(156, 163, 175); font-weight: 500; margin: 0;">Conteúdo restrito</p>
                                     </div>
                                 ` : postImageUrl ? `
-                                    <img src="https://meustalker.vercel.app/${postImageUrl}" alt="Post de ${post.username}" style="width: 100%; height: 100%; object-fit: cover; image-rendering: optimizeSpeed;" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                   <img src="${/^https?:\/\//i.test(postImageUrl) ? postImageUrl : `/${String(postImageUrl||'').replace(/^\/+/, '')}`}"
+     alt="Post de ${post.username}"
+     style="width: 100%; height: 100%; object-fit: cover; image-rendering: optimizeSpeed;"
+     loading="lazy"
+     decoding="async"
+     onerror="this.style.display='none'; this.nextElementSibling && (this.nextElementSibling.style.display='flex');">
+
                                     <div style="display: none; width: 100%; height: 100%; background: rgb(18, 24, 34); flex-direction: column; align-items: center; justify-content: center;">
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 48px; height: 48px; color: rgb(107, 114, 128); margin-bottom: 12px;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
@@ -2853,7 +2888,10 @@
                                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
                                     <div style="display: flex; align-items: center; gap: 16px;">
                                         <button class="like-button" data-post-index="${index}" data-liked="${post.liked}" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Curtir" src="https://meustalker.vercel.app/svg/${post.liked ? 'coracao-curtido' : 'coracao'}.svg" style="width: 26px; height: 26px;">
+                                           <img alt="Curtir"
+     src="/svg/${post.liked ? 'coracao-curtido' : 'coracao'}.svg"
+     style="width: 26px; height: 26px;">
+
                                             ${formattedLikes ? `<span class="likes-count-display" style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedLikes}</span>` : ''}
                                         </button>
                                         <button class="blocked-action" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
@@ -2872,7 +2910,10 @@
                                         </button>
                                     </div>
                                     <button class="save-button" data-post-index="${index}" data-saved="${post.saved}" style="background: none; border: none; cursor: pointer;">
-                                        <img alt="Salvar" src="https://meustalker.vercel.app/svg/${post.saved ? 'salvar-salvado' : 'salvar'}.svg" style="width: 24px; height: 24px;">
+                                      <img alt="Salvar"
+     src="/svg/${post.saved ? 'salvar-salvado' : 'salvar'}.svg"
+     style="width: 24px; height: 24px;">
+
 
                                     </button>
                                 </div>
@@ -3589,6 +3630,7 @@
     </script>
 </body>
 </html>
+
 
 
 
