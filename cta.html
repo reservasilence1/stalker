@@ -9,18 +9,7 @@
     <link rel="shortcut icon" href="images/icon-site.png">
     <link rel="stylesheet" href="css/cta.css" id="cta-css">
     <style>body { background: #000; }</style>
-    <!-- UTMify Pixel -->
-    <script>
-    window.pixelId = "69507e93c17d4c2b1747d7d0";
-    var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
-    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-    document.head.appendChild(a);
-    </script><script async="" defer="" src="js/pixel.js"></script>
-    
-    <!-- UTMify UTM Capture -->
-    <script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+  
 </head>
 <body>
     <!-- Matrix Canvas Background -->
@@ -646,7 +635,7 @@
                         parsed = {
                             username: cleanUsername,
                             full_name: '',
-                            profile_pic_url: './imagens/perfil-espionado.jpeg'
+                            profile_pic_url: './images/perfil-espionado.jpeg'
                         };
                     }
                     
@@ -677,7 +666,7 @@
                     }
                     
                     // Preencher foto de perfil em todos os lugares
-                    let profilePicUrl = parsed.profile_pic_url || './imagens/perfil-espionado.jpeg';
+                    let profilePicUrl = parsed.profile_pic_url || './images/perfil-espionado.jpeg';
                     
                     // Aplicar proxy se for URL do Instagram e ainda não tiver proxy
                     if (profilePicUrl && !profilePicUrl.includes('image-proxy.php') && (profilePicUrl.includes('cdninstagram.com') || profilePicUrl.startsWith('http://') || profilePicUrl.startsWith('https://'))) {
@@ -691,7 +680,7 @@
                     if (profileImg) {
                         profileImg.src = profilePicUrl;
                         profileImg.onerror = function() {
-                            this.src = './imagens/perfil-espionado.jpeg';
+                            this.src = './images/perfil-espionado.jpeg';
                         };
                     }
 
@@ -700,7 +689,7 @@
                     if (locationImg) {
                         locationImg.src = profilePicUrl;
                         locationImg.onerror = function() {
-                            this.src = './imagens/perfil-espionado.jpeg';
+                            this.src = './images/perfil-espionado.jpeg';
                         };
                     }
 
@@ -988,7 +977,7 @@
         
         // Event listeners para elementos bloqueados
         function initBlockedAccessListeners() {
-            // 1. Imagens de media-grid-instagram
+            // 1. images de media-grid-instagram
             const mediaImages = document.querySelectorAll('.media-grid-instagram img, .media-grid-instagram .media-item-gallery');
             mediaImages.forEach(element => {
                 element.style.cursor = 'pointer';
