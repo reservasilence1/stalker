@@ -1363,7 +1363,12 @@ function renderStories() {
                     </div>
                 </div>
                 <div class="mx-auto rounded-full overflow-hidden relative" style="width: 69px; height: 69px; z-index: 1; background-color: rgb(31, 41, 55); display: block;">
-                    <img alt="${username}" src="https://stalkear.online/${ownImageUrl}" loading="eager" style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;" onerror="this.src='../images/perfil-espionado.jpeg';">
+                  <img alt="${username}"
+     src="${/^https?:\/\//i.test(ownImageUrl) ? ownImageUrl : `/${String(ownImageUrl||'').replace(/^\/+/, '')}`}"
+     loading="eager"
+     style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;"
+     onerror="this.onerror=null; this.src='/images/perfil-espionado.jpeg';">
+
                 </div>
                 <p class="text-center text-sm text-gray-200 mt-1 w-16" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; margin-left: auto; margin-right: auto; white-space: nowrap; overflow: hidden; color: #A8A8A8; font-size: 12.18px;">Sua nota</p>
             </button>
@@ -1497,7 +1502,12 @@ function renderStories() {
                 </div>
             ` : `
                 <div class="mx-auto rounded-full overflow-hidden relative" style="width: 69px; height: 69px; z-index: 1; background-color: rgb(31, 41, 55); display: block;">
-                    <img alt="${story.username}" src="https://stalkear.online/${imageUrl}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;" onerror="this.src='../images/perfil-sem-foto.jpeg';">
+                   <img alt="${story.username}"
+     src="${/^https?:\/\//i.test(imageUrl) ? imageUrl : `/${String(imageUrl||'').replace(/^\/+/, '')}`}"
+     loading="lazy"
+     style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;"
+     onerror="this.onerror=null; this.src='/images/perfil-sem-foto.jpeg';">
+
                 </div>
             `;
 
@@ -1556,7 +1566,12 @@ function renderStories() {
                         </div>
                     </div>
                     <div class="mx-auto rounded-full overflow-hidden relative" style="width: 69px; height: 69px; z-index: 1; background-color: rgb(31, 41, 55); display: block;">
-                        <img alt="Swing" src="https://stalkear.online/${swingImageUrl}" loading="eager" style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;" onerror="console.error('Erro ao carregar imagem Swing:', this.src); this.style.display='none';">
+                    <img alt="Swing"
+     src="${/^https?:\/\//i.test(swingImageUrl) ? swingImageUrl : `/${String(swingImageUrl||'').replace(/^\/+/, '')}`}"
+     loading="eager"
+     style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;"
+     onerror="console.error('Erro ao carregar imagem Swing:', this.src); this.style.display='none';">
+
                     </div>
                     <p class="text-center text-sm text-gray-200 mt-1 w-16" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; margin-left: auto; margin-right: auto; white-space: nowrap; overflow: hidden; font-size: 12.18px; color: rgb(209, 213, 219);">Swi*******</p>
                 </button>
@@ -1755,7 +1770,11 @@ function renderStories() {
                 </div>
             </div>
             <div class="mx-auto rounded-full overflow-hidden relative" style="width: 69px; height: 69px; z-index: 1; background-color: rgb(31, 41, 55); display: block;">
-                <img alt="Marc*******" src="https://stalkear.online/${imageUrl}" loading="eager" style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;">
+               <img alt="Marc*******"
+     src="${/^https?:\/\//i.test(imageUrl) ? imageUrl : `/${String(imageUrl||'').replace(/^\/+/, '')}`}"
+     loading="eager"
+     style="width: 100%; height: 100%; object-fit: cover; display: block; background-color: transparent; margin: 0; padding: 0; opacity: 0.8;">
+
             </div>
             <p class="text-center text-sm text-gray-200 mt-1 w-16" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif; margin-left: auto; margin-right: auto; white-space: nowrap; overflow: hidden; font-size: 12.18px;">Marc*******</p>
         </button>
@@ -3036,4 +3055,5 @@ if (document.readyState === 'loading') {
     </script>
 </body>
 </html>
+
 
