@@ -2845,7 +2845,7 @@
                                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
                                     <div style="display: flex; align-items: center; gap: 16px;">
                                         <button class="like-button" data-post-index="${index}" data-liked="${post.liked}" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Curtir" src="https://meustalker.vercel.app/svg/${post.liked&#32;?&#32;'coracao-curtido'&#32;:&#32;'coracao'}.svg" style="width: 26px; height: 26px;">
+                                            <img alt="Curtir" src="https://meustalker.vercel.app/svg/${post.liked ? 'coracao-curtido' : 'coracao'}.svg" style="width: 26px; height: 26px;">
                                             ${formattedLikes ? `<span class="likes-count-display" style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedLikes}</span>` : ''}
                                         </button>
                                         <button class="blocked-action" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
@@ -3580,6 +3580,7 @@
     </script>
 </body>
 </html>
+
 
 
 
