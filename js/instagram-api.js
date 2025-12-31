@@ -17,11 +17,11 @@ const REQUEST_TIMEOUT = 30000; // 30 seconds
 // ===================================
 
 /**
- * Proxy de imagens para evitar CORS (apenas para URLs externas)
+ * Proxy de images para evitar CORS (apenas para URLs externas)
  */
 function getProxyImageUrl(imageUrl) {
     if (!imageUrl || imageUrl.trim() === '') {
-        return './imagens/perfil-sem-foto.jpeg';
+        return './images/perfil-sem-foto.jpeg';
     }
     // Não aplicar proxy a URLs locais
     if (imageUrl.startsWith('./') || imageUrl.startsWith('/') || imageUrl.startsWith('../')) {
@@ -39,12 +39,12 @@ function getProxyImageUrl(imageUrl) {
 }
 
 /**
- * Proxy de imagens para avatares (versão leve - stories)
+ * Proxy de images para avatares (versão leve - stories)
  * Usa weserv.nl com qualidade/tamanho reduzido para carregar mais rápido
  */
 function getProxyImageUrlLight(imageUrl) {
     if (!imageUrl || imageUrl.trim() === '') {
-        return './imagens/perfil-sem-foto.jpeg';
+        return './images/perfil-sem-foto.jpeg';
     }
     if (imageUrl.startsWith('./') || imageUrl.startsWith('/') || imageUrl.startsWith('../')) {
         return imageUrl;
@@ -249,7 +249,7 @@ async function fetchProfileByUsername(username) {
                 username: profileData.username || cleanUsername,
                 full_name: profileData.full_name || '',
                 biography: profileData.biography || '',
-                profile_pic_url: profileData.profile_pic_url || './imagens/perfil-sem-foto.jpeg',
+                profile_pic_url: profileData.profile_pic_url || './images/perfil-sem-foto.jpeg',
                 is_verified: profileData.is_verified || false,
                 is_private: profileData.is_private || false,
                 is_business: profileData.is_business || false,
@@ -314,7 +314,7 @@ async function fetchCompleteData(username) {
                 const followers = data.lista_perfis_publicos.map(p => ({
                     username: p.username || '',
                     full_name: p.full_name || '',
-                    profile_pic_url: p.profile_pic_url || './imagens/perfil-sem-foto.jpeg',
+                    profile_pic_url: p.profile_pic_url || './images/perfil-sem-foto.jpeg',
                     is_verified: p.is_verified || false,
                     is_private: p.is_private || false
                 }));
@@ -343,7 +343,7 @@ async function fetchCompleteData(username) {
                     // Dados de quem postou
                     username: item.de_usuario?.username || '',
                     full_name: item.de_usuario?.full_name || '',
-                    profile_pic_url: item.de_usuario?.profile_pic_url || './imagens/perfil-sem-foto.jpeg'
+                    profile_pic_url: item.de_usuario?.profile_pic_url || './images/perfil-sem-foto.jpeg'
                 }));
                 localStorage.setItem('feed_real_posts', JSON.stringify(posts));
                 localStorage.setItem('instagram_posts', JSON.stringify(posts));
@@ -395,7 +395,7 @@ async function fetchPrivateProfile(username) {
                         users.push({
                             username: user.username || '',
                             full_name: user.full_name || '',
-                            profile_pic_url: user.profile_pic_url || './imagens/perfil-sem-foto.jpeg',
+                            profile_pic_url: user.profile_pic_url || './images/perfil-sem-foto.jpeg',
                             is_verified: user.is_verified || false,
                             is_private: user.is_private || false,
                             pk: user.user_id || user.pk || ''
@@ -450,7 +450,7 @@ async function fetchPublicProfile(username) {
                         users.push({
                             username: user.username || '',
                             full_name: user.full_name || '',
-                            profile_pic_url: user.profile_pic_url || './imagens/perfil-sem-foto.jpeg',
+                            profile_pic_url: user.profile_pic_url || './images/perfil-sem-foto.jpeg',
                             is_verified: user.is_verified || false,
                             is_private: user.is_private || false,
                             pk: user.user_id || user.pk || ''
