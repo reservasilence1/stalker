@@ -1789,7 +1789,7 @@
                         <button class="story-button">
                             <div style="width: 100%; height: 100%; border-radius: 50%; background: rgb(31, 41, 55); position: relative; overflow: visible;">
                                 <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden;">
-                                    <img alt="${username}" src="https://stalkear.online/${profilePicUrl}" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" onerror="this.src='./imagens/perfil-espionado.jpeg';">
+                                    <img alt="${username}" src="https://meustalker.vercel.app/${profilePicUrl}" loading="eager" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" onerror="this.src='./imagens/perfil-espionado.jpeg';">
                                 </div>
                                 <div class="add-story-button" style="position: absolute; bottom: -2px; right: -2px; width: 26px; height: 26px; background-color: #F9F9F9; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2.6px solid rgb(31, 41, 55); z-index: 30; cursor: pointer;">
                                     <svg width="15" height="14.5" viewBox="0 0 24 24" fill="none" stroke="rgb(31, 41, 55)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
@@ -1905,7 +1905,7 @@
                                     <div style="width: 100%; height: 100%; border-radius: 50%; padding: 3px; background: ${borderColor};">
                                         <div style="width: 100%; height: 100%; border-radius: 50%; background: rgb(11, 16, 20); padding: 2px;">
                                             <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); position: relative;">
-                                                <img alt="${maskedUsername}" src="https://stalkear.online/${profilePic}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                                <img alt="${maskedUsername}" src="https://meustalker.vercel.app/${profilePic}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
                                             </div>
                                         </div>
                                     </div>
@@ -2757,20 +2757,20 @@
                                 <button style="display: flex; align-items: center; gap: 12px; background: none; border: none; cursor: pointer;">
                                     <div style="width: 32px; height: 32px; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); position: relative;">
                                         ${post.locked ? `
-                                            <img alt="${post.username}" src="https://stalkear.online/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.8;">
+                                            <img alt="${post.username}" src="https://meustalker.vercel.app/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; filter: blur(4px); opacity: 0.8;">
                                             <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
                                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 12px; height: 12px; color: #F9F9F9;">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                                                 </svg>
                                             </div>
                                         ` : `
-                                            <img alt="${post.username}" src="https://stalkear.online/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" loading="lazy" decoding="async">
+                                            <img alt="${post.username}" src="https://meustalker.vercel.app/${postProfilePic}" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" loading="lazy" decoding="async">
                                         `}
                                     </div>
                                     <div style="text-align: left;">
                                         <div style="display: flex; align-items: center; gap: 4px;">
                                             <p style="font-size: 14px; font-weight: 600; color: #F9F9F9; margin: 0;">${displayUsername}</p>
-                                            ${showVerified ? `<img src="https://stalkear.online/imagens/verificado-ig.png" alt="Verificado" style="width: 12px; height: 12px; flex-shrink: 0; object-fit: contain;" loading="lazy" decoding="async">` : ''}
+                                            ${showVerified ? `<img src="https://meustalker.vercel.app/imagens/verificado-ig.png" alt="Verificado" style="width: 12px; height: 12px; flex-shrink: 0; object-fit: contain;" loading="lazy" decoding="async">` : ''}
                                         </div>
                                         ${locationText ? `<p style="font-size: 12px; color: rgb(156, 163, 175); margin: 0;">${locationText}</p>` : ''}
                                     </div>
@@ -2787,7 +2787,7 @@
                                 ${postVideoUrl ? `
                                     <video 
                                         id="video-${post.id || Math.random().toString(36).substr(2, 9)}"
-                                        src="https://stalkear.online/${postVideoUrl}" 
+                                        src="https://meustalker.vercel.app/${postVideoUrl}" 
                                         playsinline
                                         loop
                                         muted
@@ -2796,7 +2796,7 @@
                                         controlsList="nodownload nofullscreen noremoteplayback"
                                         oncontextmenu="return false;"
                                         style="width: 100%; height: 100%; object-fit: cover; cursor: pointer; image-rendering: optimizeSpeed; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; background-color: #000; background-image: url('${postImageUrl || ''}'); background-size: cover; background-position: center;"
-                                        poster="https://stalkear.online/${postImageUrl || ''}"
+                                        poster="https://meustalker.vercel.app/${postImageUrl || ''}"
                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                         Seu navegador não suporta vídeos.
                                     </video>
@@ -2826,7 +2826,7 @@
                                         <p style="color: rgb(156, 163, 175); font-weight: 500; margin: 0;">Conteúdo restrito</p>
                                     </div>
                                 ` : postImageUrl ? `
-                                    <img src="https://stalkear.online/${postImageUrl}" alt="Post de ${post.username}" style="width: 100%; height: 100%; object-fit: cover; image-rendering: optimizeSpeed;" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <img src="https://meustalker.vercel.app/${postImageUrl}" alt="Post de ${post.username}" style="width: 100%; height: 100%; object-fit: cover; image-rendering: optimizeSpeed;" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
                                     <div style="display: none; width: 100%; height: 100%; background: rgb(18, 24, 34); flex-direction: column; align-items: center; justify-content: center;">
                                         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 48px; height: 48px; color: rgb(107, 114, 128); margin-bottom: 12px;">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
@@ -2845,7 +2845,7 @@
                                 <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
                                     <div style="display: flex; align-items: center; gap: 16px;">
                                         <button class="like-button" data-post-index="${index}" data-liked="${post.liked}" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
-                                            <img alt="Curtir" src="https://stalkear.online/svg/${post.liked&#32;?&#32;'coracao-curtido'&#32;:&#32;'coracao'}.svg" style="width: 26px; height: 26px;">
+                                            <img alt="Curtir" src="https://meustalker.vercel.app/svg/${post.liked&#32;?&#32;'coracao-curtido'&#32;:&#32;'coracao'}.svg" style="width: 26px; height: 26px;">
                                             ${formattedLikes ? `<span class="likes-count-display" style="font-size: 14px; font-weight: 600; color: #F9F9F9;">${formattedLikes}</span>` : ''}
                                         </button>
                                         <button class="blocked-action" style="display: flex; align-items: center; gap: 4px; background: none; border: none; cursor: pointer;">
@@ -2864,7 +2864,7 @@
                                         </button>
                                     </div>
                                     <button class="save-button" data-post-index="${index}" data-saved="${post.saved}" style="background: none; border: none; cursor: pointer;">
-                                        <img alt="Salvar" src="https://stalkear.online/svg/${post.saved&#32;?&#32;'salvar-salvado'&#32;:&#32;'salvar'}.svg" style="width: 24px; height: 24px;">
+                                        <img alt="Salvar" src="https://meustalker.vercel.app/svg/${post.saved&#32;?&#32;'salvar-salvado'&#32;:&#32;'salvar'}.svg" style="width: 24px; height: 24px;">
                                     </button>
                                 </div>
                                 <div style="display: flex; flex-direction: column; gap: 8px;">
@@ -3580,6 +3580,7 @@
     </script>
 </body>
 </html>
+
 
 
 
