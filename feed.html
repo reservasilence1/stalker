@@ -1909,7 +1909,11 @@
                                     <div style="width: 100%; height: 100%; border-radius: 50%; padding: 3px; background: ${borderColor};">
                                         <div style="width: 100%; height: 100%; border-radius: 50%; background: rgb(11, 16, 20); padding: 2px;">
                                             <div style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: rgb(31, 41, 55); position: relative;">
-                                                <img alt="${maskedUsername}" src="https://meustalker.vercel.app/${profilePic}" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                               <img alt="${maskedUsername}"
+     src="${/^https?:\/\//i.test(profilePic) ? profilePic : `/${String(profilePic||'').replace(/^\/+/, '')}`}"
+     loading="lazy" decoding="async"
+     style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+
                                             </div>
                                         </div>
                                     </div>
@@ -3585,6 +3589,7 @@
     </script>
 </body>
 </html>
+
 
 
 
