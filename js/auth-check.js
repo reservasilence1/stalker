@@ -6,7 +6,7 @@
 (function() {
     // Verificar se está na página de início (não redirecionar de lá)
     const currentPage = window.location.pathname;
-    if (currentPage.includes('inicio1.html') || currentPage.includes('index.html')) {
+    if (currentPage.includes('index.html') || currentPage.includes('index.html')) {
         return; // Permite acesso à página inicial
     }
 
